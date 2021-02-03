@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+ <!--
+
+    
+Check if a is greater than b. Respond with:
+- Yes
+- No
+- Equal
+
+![](img/09.png)
+
+## Extra
+
+When the button is pressed change the button's text to:
+
+    "b" is greater than "a"?
+
+...and the button should work as expected.
+
+If it's pressed once more the text is changed back again.
+
+
+
+
+
+ -->
+
+ <h3>Convert String to number</h3>
+
+
+ <textarea id="myTextarea">
+ 342 
+ </textarea></textarea>
+
+ <p>Click the button to get the content of the text area.</p>
+
+ <button type="button" onclick="myFunction()">Try it</button>
+
+ <p id="demo"></p>
+
+ <script>
+     function myFunction() {
+         var x = document.getElementById("myTextarea").value;
+         let myNumber = parseInt("x")
+         document.getElementById("demo").innerHTML = x;
+
+
+     }
+
+ </script>
+
+ <h3>Convert a string to a number</h3>
+
+ <textarea id="myTextarea2">
+ 342
+ </textarea> <br />
+
+ <button type="button" onclick="myFunction2()">Try it</button>
+
+ <p id="demo2"></p>
+
+ <script>
+     function myFunction2() {
+         var y = document.getElementById("myTextarea2").value;
+         let myNumber = parseInt("y")
+         document.getElementById("demo2").innerHTML = y;
+
+
+     }
+
+ </script>
+
+
+</body>
+
+
+</html>

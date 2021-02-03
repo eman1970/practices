@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <!-- Hint
+
+Convert a string to a number
+
+    let myNumber = parseFloat(someVariable)
+
+Convert a number to a string
+
+    let myString = someVariable.toString()
+
+## Extra
+
+Update the number to the right on every keypress --->
+
+    <h3>Convert String to number</h3>
+
+
+    <textarea id="myTextarea">
+    342 
+    </textarea></textarea>
+
+    <p>Click the button to get the content of the text area.</p>
+
+    <button type="button" onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTextarea").value;
+            let myNumber = parseInt("x")
+            document.getElementById("demo").innerHTML = x;
+
+
+        }
+
+    </script>
+
+    <h3>Convert a string to a number</h3>
+
+    <textarea id="myTextarea2">
+    342
+    </textarea> <br />
+
+    <button type="button" onclick="myFunction2()">Try it</button>
+
+    <p id="demo2"></p>
+
+    <script>
+        function myFunction2() {
+            var y = document.getElementById("myTextarea2").value;
+            let myNumber = parseInt("y")
+            document.getElementById("demo2").innerHTML = y;
+
+
+        }
+
+    </script>
+
+
+
+    <h3>Add the two numbers</h3>
+
+    <button type="button" onclick="myFunction3()">Try it</button>
+
+    <p id="demo3"></p>
+
+    <script>
+
+        function myFunction3() {
+            var y = document.getElementById("myTextarea2").value;
+
+            var x = document.getElementById("myTextarea").value;
+
+            var z = Number(x) + Number(y);
+            document.getElementById("demo3").innerHTML = z;
+
+            return z;
+
+        }
+    </script>
+
+
+
+</body>
+
+
+</html>
