@@ -1,0 +1,47 @@
+<html> 
+<head> 
+<title>Text Object Value</title> 
+<script type="text/javascript"> 
+function upperMe() { 
+    document.getElementById("output").value = document.getElementById("input").value.toUpperCase(); 
+} 
+</script> 
+</head> 
+<body> 
+Enter lowercase letters for conversion to uppercase:<br> 
+<form name="converter"> 
+<input type="text" name="input" id="input" 
+value="sample" onchange="upperMe()" /><br /> 
+<input type="text" name="output" id="output" value="" /> 
+
+<script type="text/javascript">
+Array.prototype.toStringDefault = Array.prototype.toString;
+Array.prototype.toString = function (delim) {
+    if ('undefined' === typeof delim) {
+        return this.toStringDefault();
+    }
+    return this.join(delim);
+}
+var myArray = [ 'zero', 'one', 'two', 'three', 'four', 'five' ];
+var result1 = myArray.toString('_');
+document.writeln(result1);
+var result2 = myArray.toString();
+document.writeln(result2);
+</script>
+</form> 
+<script type="text/javascript">
+    Array.prototype.toStringDefault = Array.prototype.toString;
+    Array.prototype.toString = function (delim) {
+        if ('undefined' === typeof delim) {
+            return this.toStringDefault();
+        }
+        return this.join(delim);
+    }
+    var myArray = [ 'zero', 'one', 'two', 'three', 'four', 'five' ];
+    var result1 = myArray.toString('_');
+    document.writeln(result1);
+    var result2 = myArray.toString();
+    document.writeln(result2);
+    </script>
+</body> 
+</html> 

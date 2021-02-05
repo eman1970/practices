@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <title>
+
+
+    </title>
+</head>
+
+<body>
+    <!--
+## Hint
+
+Create one variable "outside" of your function. Now this variable won't be destroyed after *addOne* has been executed.
+
+    let number = 1
+
+    function addOne() {
+
+        ...
+
+    }
+
+## Extra
+
+If the button is pressed many times during a period of 500ms => just add once
+
+-->
+
+    <script>
+
+
+        function countUp() {
+            var txtInvoer = document.getElementById('txt_invoer');
+            var i = parseInt(txtInvoer.value, 10);
+            txtInvoer.value = ++i;
+        }
+
+
+    </script>
+
+    <script>
+
+
+        function countDown() {
+            var txtInvoer = document.getElementById('txt_invoer');
+            var i = parseInt(txtInvoer.value, 10);
+            txtInvoer.value = --i;
+        }
+
+
+    </script>
+
+    <script>
+
+
+
+
+    </script>
+
+    <input type="text" id="txt_invoer" value="10" />
+
+    <button onclick="countUp()">+</button>
+    <button onclick="countDown()">-</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <p>Click on the button to turn it ON and OFF</p> 
+
+<img id="lamp" src="https://media.geeksforgeeks.org/wp-content/uploads/m2-1.png" />
+<button onClick="turnOnOff()">ON/OFF</button>
+ 
+
+ 
+  
+<script> 
+ // implementation of turnOnOff function --> 
+ function turnOnOff()  {
+ // taking image in image variable 
+ 
+ var x = document.getElementById("lamp");
+ //Match the image name 
+ //whether it is ONbulb or OFFbulb 
+ //change image to OFFbulb.jpg if 
+ //it match with ONbulb otherwise 
+ //change it to ONbulb.jpg --> 
+ if (x.src.match("m2-1.png"))
+ x.src ="https://media.geeksforgeeks.org/wp-content/uploads/m1-4.png";
+ else  
+ x.src ="https://media.geeksforgeeks.org/wp-content/uploads/m2-1.png";
+ 
+} 
+</script> 
+ 
+ 
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <p>Click on the bulb to turn it ON and OFF</p> 
+
+<input type="field" value="ON" size="3" style="text-align: center;" id="lamp"/>
+<button onClick="turnOnOff()">ON/OFF</button>
+ 
+
+ 
+  
+<script> 
+ // implementation of turnOnOff function --> 
+ function turnOnOff()  {
+ // taking image in image variable 
+ 
+ var x = document.getElementById("lamp").value;
+ //Match the image name 
+ //whether it is ONbulb or OFFbulb 
+ //change image to OFFbulb.jpg if 
+ //it match with ONbulb otherwise 
+ //change it to ONbulb.jpg --> 
+ if (x=="ON") 
+ document.getElementById("lamp").value ="OFF"; 
+ else  
+ document.getElementById("lamp").value ="ON"; 
+ 
+} 
+</script> 
+ 
+ 
+
+</body>
+</html>
