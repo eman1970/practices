@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>
+    
+</title>
+
+</head>
+<body>
+    <pre id="result"></pre>
+    <script>
+
+var result = document.querySelector('#result');
+// -----------------------------------------------------------------------------------
+// Classic
+String.prototype.format = String.prototype.format ||
+  function () {
+    var args = Array.prototype.slice.call(arguments);
+    var replacer = function (a){return args[a.substr(1)-1];};
+    return this.replace(/(\$\d+)/gm, replacer)
+};
+result.textContent = 
+  'hello $1, $2'.format('[world]', '[how are you?]');
+
+// ES2015#1
+'use strict'
+String.prototype.format2 = String.prototype.format2 ||
+  function(...merge) { return this.replace(/\$\d+/g, r => merge[r.slice(1)-1]); };
+result.textContent += '\nHi there $1, $2'.format2('[sir]', '[I\'m fine, thnx]');
+
+// ES2015#2: template literal
+var merge = ['[good]', '[know]'];
+result.textContent += `\nOk, ${merge[0]} to ${merge[1]}`;
+
+</script>
+</body>
+
+</html>

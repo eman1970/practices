@@ -1,0 +1,36 @@
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <title>  
+            JavaScript | Split a string with 
+            multiple separators.  
+        </title> 
+    </head>  
+      
+    <body style = "text-align:center;" id = "body">  
+          
+        <h1 style = "color:green;" >  
+            GeeksForGeeks  
+        </h1>  
+          
+        <p id="GFG_UP" style="font-size:18px; font-weight:bold;"></p> 
+          
+        <button onclick = "gfg_Run()">  
+            split 
+        </button> 
+          
+        <p id="GFG_DOWN" style="font-size:25px; font-weight:bold;"></p> 
+          
+        <script> 
+            var el_up = document.getElementById("GFG_UP"); 
+            var el_down = document.getElementById("GFG_DOWN"); 
+            var str = "A, computer science, portal!"; 
+            el_up.innerHTML = str; 
+              
+            function gfg_Run() {   
+                var arr = str.split(/[\s, ]+/) 
+                el_down.innerHTML = arr;      
+            } 
+        </script>  
+    </body>  
+</html>       

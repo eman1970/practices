@@ -1,19 +1,47 @@
-// todo: lägg till de två sista böckerna
-// id=104, Franska fotografen, Natasha Lester, 59kr
-// id=105, Ödemark, Stina Jackson, 59kr
 const books = [
     { id: 100, title: "Skärmhjärnan", author: "Anders Hansen", price: 59 },
     { id: 101, title: "Klubben", author: "Matilda Voss", price: 59 },
     { id: 102, title: "Det sista livet", author: "Peter Nyström", price: 49 },
     { id: 103, title: "Skytten", author: "Jonas Moström", price: 59 },
     { id: 104, title: "Franska fotografen", author: "Natasha Lester", price: 59 },
-    { id: 105, title: "Ödemfdfark", author: "Stina Jackson", price: 59 },
+    { id: 105, title: "Ödemark", author: "Stina Jackson", price: 59 },
 ]
 
+const cart = []
+
+function hidePopup() {
+    // todo: göm popupen
+    
+    document.getElementById("popup-itemadded").style.display = "none"
+     
+}
+function showPopup() {
+    // todo: visa popupen
+    
+    document.getElementById("popup-itemadded").style.display = "block"
+     
+}
 
 function addToCart(id) {
-    // todo: visa en alertruta (t.ex "You wan't to add book 103 to cart")
-    alert(`You wan't to add book ${id} to cart`)
+    cart.push(id)
+
+    // todo: ta fram rätt bok
+    const book = books.find(b => b.id === id)
+
+    // todo: ta fram "book" eller "books"
+    const bookOrBooks = cart.length === 1 ? "book" : "books"
+
+    let s = `
+    <p><b>${book.title}</b> added to the cart</p>
+    <div class="buttons">
+        <button onclick="showPopup()">Show cart (${cart.length} ${bookOrBooks})</button>
+        <button onclick="hidePopup()">Close</button>
+        <button>Checkout</button>
+    </div>
+    `
+
+    document.getElementById("popup-itemadded").innerHTML = s
+    document.getElementById("popup-itemadded").style.display = "block"
 }
 
 function render() {
@@ -21,7 +49,6 @@ function render() {
     let s = "";
 
     for (let book of books) {
-        // todo: lägg in titeln
         s += `
             <article>
                 <div class="image">

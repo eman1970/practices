@@ -18,6 +18,23 @@
     border: 1px solid #000000;
   }
   
+  h1 {
+    margin-top:0
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+p {
+    font-size: 15px;
+}
+
   /* The grid container */
   .grid-container {
     display: grid;
@@ -273,7 +290,17 @@ display: inline;
   
 
  
-  
+  .list span{
+
+    font-size: 15px;
+    
+  }
+
+  .list-sum {
+
+    font-size: 15px;
+
+  }
  
 
   #box a:visited {
@@ -288,8 +315,224 @@ display: inline;
 #box  a:active {
   text-decoration: underline;
 }
+
+}
+.cart, .img{
+    width:30%;
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+.cart button {
+    
+    font-size:10px;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 13px;
+    justify-content: space-between;
+}
+
+.menu li {
+   padding-right: 12px;
+    cursor: pointer;
+    
+}
+
+
+.booklist {
+  display:flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  float: right;
+  padding: 3px;
+ 
+  
+  justify-content: space-between;
+  row-gap: 10px;
+  column-gap: 5px;
+
+}
+
+.booklist article {
+  width:100px;
+}
+
+.booklist article button {
+  width:100%;
+}
+
+.booklist h2 {
+  margin:0;
+  padding:0;
+  font-size: 10px;
+}
+
+.booklist p {
+  margin:0;
+  padding:0;
+  font-size:10px;
+  
+}
+
+.booklist .image {
+  height: 150px;
+  background-color:#333;
+}
+
+.popup-cart,
+.popup-itemadded {
+    position: absolute;
+    width:260px;
+    background-color:white;
+    border:solid 1px;
+    padding:10px;
+    top:70px;
+    left:-100px;
+    border-radius: 10px;
+}
+
+.popup-itemadded{
+    display: none;
+}
+
+.popup-itemadded .buttons{
+    display:grid;
+    row-gap: 10px;
+    column-gap: 10px; 
+
+    grid-template: 
+    'a a'
+    'b c'
+}
+
+.popup-itemadded .buttons button:nth-child(1){
+    grid-area: a;
+}
+
+.popup-itemadded .buttons button:nth-child(2){
+    grid-area: b;
+}
+
+.popup-itemadded .buttons button:nth-child(3){
+    grid-area: c;
+}
+
+.popup-itemadded .buttons button {
+    padding:5px;
+}
+
+.popup-cart .list article{
+    display: grid;
+    grid-template:
+    'a . b b'
+    'a . b b'
+    'a . c d'
+    ;
+    grid-template-columns: 70px 10px auto 70px;
+    margin-bottom: 20px;
+}
+.popup-cart .list article input {
+    width:15px
+}
+
+/* .popup-cart .list article > * {
+    border:solid 1px
+} */
+
+.popup-cart .list article > *:nth-child(1){
+    grid-area:a;
+    background-color:rgb(119, 119, 119);
+    height:100px;
+}
+
+.popup-cart .list article > *:nth-child(2){
+    grid-area:b;
+    margin:0;
+    font-weight: bold;
+}
+
+.popup-cart .list article > *:nth-child(3){
+    grid-area:c
+}
+
+.popup-cart .list article > *:nth-child(4){
+    grid-area:d;
+    justify-self: end;
+}
+
+.popup-cart .list-sum{
+    display: grid;
+    grid-template:
+    'a b'
+    'c c';
+    grid-template-columns: auto 70px;
+    margin-bottom: 20px;
+}
+
+.popup-cart .list-sum > *:nth-child(1){
+    grid-area:a;
+}
+.popup-cart .list-sum > *:nth-child(2){
+    grid-area:b;
+    justify-self: end;
+    font-weight: bold;
+}
+
+.popup-cart .list-sum > *:nth-child(3){
+    grid-area:c;
+    font-size:11px;
+}
+
+.popup-cart .buttons {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.popup-cart .buttons button{
+    padding:5px;
+}
+
+
+.numberCircle {
+  position: absolute;
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  padding: 1px;
+  background: #fff;
+  border: 2px solid #666;
+  color: #666;
+  text-align: center;
+  left: 38px;
+  font: 12px Arial, sans-serif;
+  top: 35px;
+}
+
  
  
+.cart {
+  display: flex;
+  position: relative;
+}
+.cart img{
+  width:30%;
+  cursor: pointer;
+  padding-right: 10px;
+}
+
+.cart button {
+  
+  font-size:10px;
+}
+
   
  
  
